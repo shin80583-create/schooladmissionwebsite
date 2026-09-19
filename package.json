@@ -1,0 +1,1 @@
+{"name":"campusflow-school-admission-platform","version":"1.0.0","private":true,"description":"Responsive school admission dashboard built with HTML, CSS and JavaScript","scripts":{"start":"python3 -m http.server 8080","dev":"python3 -m http.server 8080"}}
