@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="CampusFlow — a modern school admission and student management dashboard.">
+  <title>CampusFlow | School Admission Platform</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#dashboard">Campus<span>Flow</span></a>
+  <nav><a href="#dashboard">Dashboard</a><a href="#applications">Applications</a><a href="#students">Students</a><a href="#reports">Reports</a></nav>
+  <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">◐</button>
+</header>
+<main>
+<section class="hero" id="dashboard">
+  <div><p class="eyebrow">ACADEMIC YEAR 2026–27</p><h1>Admissions, simplified.</h1><p class="hero-copy">A polished command center for managing applicants, students, documents and admission progress in one place.</p><div class="actions"><a class="btn primary" href="#applications">Review applications</a><button class="btn secondary" id="openModal">Add applicant</button></div></div>
+  <div class="hero-card"><div class="ring"><strong>78%</strong><span>filled</span></div><div><b>Seats available</b><p>412 of 1,850 seats</p><div class="progress"><i style="width:78%"></i></div></div></div>
+</section>
+<section class="stats">
+  <article><span>Total applications</span><strong>1,284</strong><em class="up">+12.4%</em></article>
+  <article><span>Pending review</span><strong>186</strong><em>Needs attention</em></article>
+  <article><span>Admitted</span><strong>742</strong><em class="up">+8.1%</em></article>
+  <article><span>Conversion rate</span><strong>57.8%</strong><em class="up">+3.2%</em></article>
+</section>
+<section class="grid" id="applications">
+  <div class="panel wide"><div class="panel-head"><div><p class="eyebrow">LIVE QUEUE</p><h2>Recent applications</h2></div><button class="text-btn" id="searchBtn">Search</button></div>
+    <div class="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="pending">Pending</button><button class="filter" data-filter="approved">Approved</button></div>
+    <div class="table-wrap"><table><thead><tr><th>Applicant</th><th>Grade</th><th>Submitted</th><th>Status</th><th></th></tr></thead><tbody id="applicationRows">
+      <tr data-status="pending"><td><div class="person"><span>AK</span><div><b>Aarav Kumar</b><small>aarav@example.com</small></div></div></td><td>Grade 8</td><td>Today, 9:42 AM</td><td><span class="status pending">Pending</span></td><td><button class="more">•••</button></td></tr>
+      <tr data-status="approved"><td><div class="person"><span>SI</span><div><b>Siya Iyer</b><small>siya@example.com</small></div></div></td><td>Grade 6</td><td>Today, 8:18 AM</td><td><span class="status approved">Approved</span></td><td><button class="more">•••</button></td></tr>
+      <tr data-status="pending"><td><div class="person"><span>RN</span><div><b>Rohan Nair</b><small>rohan@example.com</small></div></div></td><td>Grade 10</td><td>Yesterday</td><td><span class="status pending">Pending</span></td><td><button class="more">•••</button></td></tr>
+      <tr data-status="approved"><td><div class="person"><span>MP</span><div><b>Meera Patel</b><small>meera@example.com</small></div></div></td><td>Grade 9</td><td>Yesterday</td><td><span class="status approved">Approved</span></td><td><button class="more">•••</button></td></tr>
+    </tbody></table></div>
+  </div>
+  <aside class="panel" id="reports"><div class="panel-head"><div><p class="eyebrow">OVERVIEW</p><h2>Applications</h2></div></div><div class="chart"><div class="bars"><i style="height:42%"></i><i style="height:58%"></i><i style="height:48%"></i><i style="height:76%"></i><i style="height:66%"></i><i style="height:92%"></i><i style="height:82%"></i></div><div class="labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div><div class="legend"><span><i></i>Applications received</span><b>+18.6%</b></div></aside>
+</section>
+<section class="feature-grid" id="students"><div><p class="eyebrow">WORK SMARTER</p><h2>Everything your admissions team needs.</h2></div><div class="feature"><b>01 · Applicant CRM</b><p>Keep profiles, communication history and documents together.</p></div><div class="feature"><b>02 · Automated workflow</b><p>Move applications through review, interview and decision stages.</p></div><div class="feature"><b>03 · Decision analytics</b><p>Track enrollment trends and capacity with clear dashboards.</p></div></section>
+</main>
+<div class="modal hidden" id="modal"><div class="modal-card"><button class="close" id="closeModal">×</button><p class="eyebrow">NEW APPLICATION</p><h2>Add applicant</h2><form id="appForm"><label>Full name<input required id="name" placeholder="e.g. Ananya Rao"></label><label>Email<input required type="email" placeholder="ananya@example.com"></label><label>Grade<select><option>Grade 6</option><option>Grade 7</option><option>Grade 8</option><option>Grade 9</option><option>Grade 10</option></select></label><button class="btn primary" type="submit">Create application</button></form></div></div>
+<footer><span>CampusFlow</span><span>Built for modern school operations · 2026</span></footer>
+<script src="app.js"></script>
+</body></html>
